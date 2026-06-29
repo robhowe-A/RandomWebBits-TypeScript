@@ -1,0 +1,347 @@
+#root path
+/
+  Cache-Control: no-cache
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' kit.fontawesome.com  https://www.googletagmanager.com; frame-ancestors 'self'
+  Content-Type: text/html; charset=utf-8
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+#index page
+/index.html
+  Cache-Control: no-cache
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' kit.fontawesome.com  https://www.googletagmanager.com; frame-ancestors 'self'
+  Content-Type: text/html; charset=utf-8
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+#pages page
+/pages.html
+  Cache-Control: no-cache
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-ancestors 'self'
+  Content-Type: text/html; charset=utf-8
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+#all pages
+/pages/*
+  Cache-Control: no-cache
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' cdn.jsdelivr.net kit.fontawesome.com https://www.googletagmanager.com; frame-ancestors 'self'
+  Content-Type: text/html; charset=utf-8
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+#all guides
+/guides/*
+  Cache-Control: no-cache
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-ancestors 'self'
+  Content-Type: text/html; charset=utf-8
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+#all explore
+/explore/*
+  Cache-Control: no-cache
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-ancestors 'self'
+  Content-Type: text/html; charset=utf-8
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+#library
+/library/*
+  Cache-Control: no-cache
+#images
+/library/img/*
+  Cache-Control: max-age=86400
+  X-Content-Type-Options: nosniff
+/css/*
+  Cache-Control: max-age=86400
+  Content-Type: text/css; charset=utf-8
+  X-Content-Type-Options: nosniff
+
+
+/library/img/2dShapes.png
+	Content-Type: image/png;
+/library/img/BingSkinny.jpeg
+	Content-Type: image/jpeg;
+/library/img/BingWide.jpeg
+	Content-Type: image/jpeg;
+/library/img/ClearCookies.png
+	Content-Type: image/png;
+/library/img/DevToolsCSSOverview-Colors.png
+	Content-Type: image/png;
+/library/img/DevToolsCSSOverview-Font.png
+	Content-Type: image/png;
+/library/img/DevToolsCSSOverview-SelectorPerformance.png
+	Content-Type: image/png;
+/library/img/DevToolsCSSOverview-Summary.png
+	Content-Type: image/png;
+/library/img/DevToolsCSSOverview-UnusedDeclarationsMediaQueries.png
+	Content-Type: image/png;
+/library/img/DevToolsCSSOverview.png
+	Content-Type: image/png;
+/library/img/DevToolsConsole-RWB.png
+	Content-Type: image/png;
+/library/img/DevToolsConsole-RWBconsolesource.png
+	Content-Type: image/png;
+/library/img/DevToolsConsole-RWBwebbtelescope.png
+	Content-Type: image/png;
+/library/img/DevToolsElementsErrorsandWarnings.png
+	Content-Type: image/png;
+/library/img/DevToolsElementsErrorsandWarningsConsole.png
+	Content-Type: image/png;
+/library/img/DevToolsElementsIssuesandImprovements.png
+	Content-Type: image/png;
+/library/img/DevToolsElementsOpen.png
+	Content-Type: image/png;
+/library/img/DevToolsElementsOption.png
+	Content-Type: image/png;
+/library/img/DevToolsLighthouse-Extension.png
+	Content-Type: image/png;
+/library/img/DevToolsMemory0.png
+	Content-Type: image/png;
+/library/img/DevToolsMemory1.png
+	Content-Type: image/png;
+/library/img/DevToolsMemory2.png
+	Content-Type: image/png;
+/library/img/DevToolsMemory3.png
+	Content-Type: image/png;
+/library/img/DevToolsMemory4.png
+	Content-Type: image/png;
+/library/img/DevToolsMemory5.png
+	Content-Type: image/png;
+/library/img/DevToolsNetwork-exportHAR.png
+	Content-Type: image/png;
+/library/img/DevToolsNetwork.png
+	Content-Type: image/png;
+/library/img/DevToolsNetwork0.png
+	Content-Type: image/png;
+/library/img/DevToolsNetwork1-filter.png
+	Content-Type: image/png;
+/library/img/DevToolsNetwork1-filterDetail.png
+	Content-Type: image/png;
+/library/img/DevToolsNetwork2-networkConditions.png
+	Content-Type: image/png;
+/library/img/DevToolsPerformance0.png
+	Content-Type: image/png;
+/library/img/DevToolsPerformance1.png
+	Content-Type: image/png;
+/library/img/DevToolsPerformance2.png
+	Content-Type: image/png;
+/library/img/DevToolsPerformance3.png
+	Content-Type: image/png;
+/library/img/DevToolsSecurity.png
+	Content-Type: image/png;
+/library/img/DevToolsSecurity0.png
+	Content-Type: image/png;
+/library/img/DevToolsSources-RWBdom0.png
+	Content-Type: image/png;
+/library/img/DevToolsSources-RWBdom1.png
+	Content-Type: image/png;
+/library/img/DevToolsSources-RWBdom2.png
+	Content-Type: image/png;
+/library/img/DevToolsSources-RWBdom3.png
+	Content-Type: image/png;
+/library/img/DevToolsSources-RWBdom4.png
+	Content-Type: image/png;
+/library/img/DevToolsSources-RWBdom5.png
+	Content-Type: image/png;
+/library/img/DevTools_Application1.png
+	Content-Type: image/png;
+/library/img/DevTools_Application2-Before.png
+	Content-Type: image/png;
+/library/img/DevTools_Application4-After.png
+	Content-Type: image/png;
+/library/img/DevTools_Application5-After_Cookies.png
+	Content-Type: image/png;
+/library/img/Edge-Inspect.png
+	Content-Type: image/png;
+/library/img/Edge-Inspect_ctrlq.png
+	Content-Type: image/png;
+/library/img/Edge-Inspect_inspect.png
+	Content-Type: image/png;
+/library/img/Edge-Inspect_inspected-page.png
+	Content-Type: image/png;
+/library/img/HTML_Frames.jpeg
+	Content-Type: image/jpeg;
+/library/img/HTML_Frames.webp
+	Content-Type: image/webp;
+/library/img/HTML_source.webp
+	Content-Type: image/webp;
+/library/img/InspectElement1.png
+	Content-Type: image/png;
+/library/img/InspectElement2.png
+	Content-Type: image/png;
+/library/img/InspectElement3.png
+	Content-Type: image/png;
+/library/img/InspectElement4.png
+	Content-Type: image/png;
+/library/img/JWST_poster.webp
+	Content-Type: image/webp;
+/library/img/NASA.GOV.jpeg
+	Content-Type: image/jpeg;
+/library/img/NASA.jpg
+	Content-Type: image/jpg;
+/library/img/NASA.webp
+	Content-Type: image/webp;
+/library/img/NASA_Home-small.jpeg
+	Content-Type: image/jpeg;
+/library/img/NASA_Home.jpeg
+	Content-Type: image/jpeg;
+/library/img/PWA-InstallAsAnApp.png
+	Content-Type: image/png;
+/library/img/PWA2-AppInstalled.png
+	Content-Type: image/png;
+/library/img/PWA3-AppLaunched.png
+	Content-Type: image/png;
+/library/img/PWA4-TaskbarAfter.png
+	Content-Type: image/png;
+/library/img/PWA4-TaskbarBefore.png
+	Content-Type: image/png;
+/library/img/SMTP_commands_overview.png
+	Content-Type: image/png;
+/library/img/Web capture_31-1-2023_162356_www.ibm.com.webp
+	Content-Type: image/webp;
+/library/img/Whois_thisrandomwebdomain.com.png
+	Content-Type: image/png;
+/library/img/ai.webp
+	Content-Type: image/webp;
+/library/img/api.webp
+	Content-Type: image/webp;
+/library/img/app-development.webp
+	Content-Type: image/webp;
+/library/img/artsandculture.google-large.jpeg
+	Content-Type: image/jpeg;
+/library/img/artsandculture.google-small.jpeg
+	Content-Type: image/jpeg;
+/library/img/artsandculture.google.jpeg
+	Content-Type: image/jpeg;
+/library/img/backlink.webp
+	Content-Type: image/webp;
+/library/img/boinc_glossy.webp
+	Content-Type: image/webp;
+/library/img/boinc_project.webp
+	Content-Type: image/webp;
+/library/img/chatGPT_First.jpeg
+	Content-Type: image/jpeg;
+/library/img/chatGPT_Second.jpeg
+	Content-Type: image/jpeg;
+/library/img/check.webp
+	Content-Type: image/webp;
+/library/img/checked.webp
+	Content-Type: image/webp;
+/library/img/chronometer.webp
+	Content-Type: image/webp;
+/library/img/color-wheel.webp
+	Content-Type: image/webp;
+/library/img/communications.webp
+	Content-Type: image/webp;
+/library/img/cookies.webp
+	Content-Type: image/webp;
+/library/img/css-3.webp
+	Content-Type: image/webp;
+/library/img/cursor.webp
+	Content-Type: image/webp;
+/library/img/dictionary.webp
+	Content-Type: image/webp;
+/library/img/dns.webp
+	Content-Type: image/webp;
+/library/img/error.png
+	Content-Type: image/png;
+/library/img/favicon/ImageHome_Favicon.png
+	Content-Type: image/png;
+/library/img/favicon/vectorstock_45026755.png
+	Content-Type: image/png;
+/library/img/firefox_fullcode.png
+	Content-Type: image/png;
+/library/img/firefox_sourcecode.png
+	Content-Type: image/png;
+/library/img/google-expeditions.webp
+	Content-Type: image/webp;
+/library/img/html.webp
+	Content-Type: image/webp;
+/library/img/http.webp
+	Content-Type: image/webp;
+/library/img/https0.png
+	Content-Type: image/png;
+/library/img/https1.png
+	Content-Type: image/png;
+/library/img/https2.png
+	Content-Type: image/png;
+/library/img/https3.png
+	Content-Type: image/png;
+/library/img/https_cert.webp
+	Content-Type: image/webp;
+/library/img/ip.webp
+	Content-Type: image/webp;
+/library/img/json.webp
+	Content-Type: image/webp;
+/library/img/lighthouse.webp
+	Content-Type: image/webp;
+/library/img/openWith.webp
+	Content-Type: image/webp;
+/library/img/page-speed.webp
+	Content-Type: image/webp;
+/library/img/prototype.webp
+	Content-Type: image/webp;
+/library/img/search-engine.webp
+	Content-Type: image/webp;
+/library/img/search_settings.webp
+	Content-Type: image/webp;
+/library/img/server.webp
+	Content-Type: image/webp;
+/library/img/showcase_newsletter.jpg
+	Content-Type: image/jpg;
+/library/img/software-application.webp
+	Content-Type: image/webp;
+/library/img/ssl.webp
+	Content-Type: image/webp;
+/library/img/svg.svg
+	Content-Type: image/svg+xml;
+/library/img/terminal.webp
+	Content-Type: image/webp;
+/library/img/terminal2.webp
+	Content-Type: image/webp;
+/library/img/terminal3.webp
+	Content-Type: image/webp;
+/library/img/terminal4.webp
+	Content-Type: image/webp;
+/library/img/terminal5.webp
+	Content-Type: image/webp;
+/library/img/terminal6.webp
+	Content-Type: image/webp;
+/library/img/terminal7.webp
+	Content-Type: image/webp;
+/library/img/tool-box.webp
+	Content-Type: image/webp;
+/library/img/tool-box2.webp
+	Content-Type: image/webp;
+/library/img/tree.webp
+	Content-Type: image/webp;
+/library/img/ux.webp
+	Content-Type: image/webp;
+/library/img/wappalyzer-logo.webp
+	Content-Type: image/webp;
+/library/img/watchIngrid.webp
+	Content-Type: image/webp;
+/library/img/web-development.webp
+	Content-Type: image/webp;
+/library/img/webide__brackets-icon.svg
+	Content-Type: image/svg+xml;
+/library/img/webide__cloud9ide.png
+	Content-Type: image/png;
+/library/img/webide__codio.png
+	Content-Type: image/png;
+/library/img/webide__github-mark-white.png
+	Content-Type: image/png;
+/library/img/webide__jsfiddle-logo.png
+	Content-Type: image/png;
+/library/img/webide__replit-logo-white.png
+	Content-Type: image/png;
+/library/img/webtech.html.webp
+	Content-Type: image/webp;
+/library/img/whois.webp
+	Content-Type: image/webp;
+/library/img/wifi.webp
+	Content-Type: image/webp;
+/library/img/www.webp
+	Content-Type: image/webp;

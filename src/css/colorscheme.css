@@ -1,0 +1,376 @@
+/*--Copyright (c) 2024-2026 Robert A. Howell*/
+
+:root {
+    /* Browser preference is light mode. Change below CSS for dark toggle, too. */
+    @media (prefers-color-scheme: light) {
+        & {
+          --clr-light-100: #ffffff;
+          --clr-light-300: #fefefe;
+          --clr-light-500: #e7e7e7;
+          --clr-light-600: #cacaca;
+          --clr-light-700: #989898;
+          --clr-dark-300: #858585;
+          --clr-dark-400: #5c5c5c;
+          --clr-dark-500: #333333;
+          --clr-dark-600: #292929;
+          --clr-dark-700: #1f1f1f;
+          --clr-dark-800: #141414;
+          --clr-dark-900: #0a0a0a;
+          --clr-primary-100: #d4e8f1;
+          --clr-primary-200: #aad1e3;
+          --clr-primary-300: #7fb9d4;
+          --clr-primary-400: #53a1c6;
+          --clr-primary-500: #2c94c3;
+          --clr-primary-600: #226e91;
+          --clr-primary-700: #19526c;
+          --clr-primary-800: #12384a;
+          --clr-primary-800-2: #12384a80;
+          --clr-primary-900: #081c25;
+          --clr-all-primary-900: #081020;
+          --clr-all-primary-800: #171c27;
+          --clr-all-primary-500: #2d95c5;
+          --clr-all-font-white: #fdfdfd;
+          --clr-all-font-light: #c7c2c2;
+          --clr-all-font-black: #0a0a0a;
+          --clr-header-blue: #0a335c;
+          --clr-title: #a7d0dc;
+          --clr-Pink: #ffc0cb;
+          --clr-Cyan: #009999;
+          --clr-DarkCyan: #006666;
+          --clr-WhoIS_Orange: #f5893a;
+          --clr-Orange_Focus: #ffa500;
+          --clr-Green: #00aa00;
+          --clr-Lightcoral: #f08080;
+          --clr-Green-Alert: 120, 100%, 33%, 0.5;
+          --clr-Brown-Alert: 34, 57%, 70%, 0.5;
+          --clr-Pink-Alert: 350, 95%, 16%, 0.8;
+          --clr-Orange-Alert: 39, 100%, 50%, 0.7;
+          --clr-Skyblue: #87ceeb;
+          --clr-Red: #f51212;
+          --clr-Brown: #fcdaae;
+          --clr-HSLA-Brown: hsla(39, 100%, 70%, 0.7);
+          --clr-HSLA-Brown-Dark: hsla(39, 100%, 50%, 0.7);
+          --clr-HSLA-Red: hsla(350, 95%, 30%, 0.8);
+          --clr-HSLA-Red-Dark: hsla(350, 95%, 16%, 0.8);
+          --clr-HSLA-Gray: hsla(34, 57%, 85%, 0.5);
+          --clr-HSLA-Gray-Dark: hsla(34, 57%, 70%, 0.5);
+          --clr-HSLA-Green: hsla(120, 100%, 50%, 0.5);
+          --clr-HSLA-Green-Dark: hsla(120, 100%, 33%, 0.5);
+          --clr-elementisopenPink: 326, 37%, 55%;
+          --clr-elementisclosedBlue: 191, 39%, 40%;
+          --clr-darkslategray: #2f4f4f;
+        }
+      }
+    /* User preference changes to light mode */
+    & body.lightMode{
+      --clr-light-100: #ffffff;
+      --clr-light-300: #fefefe;
+      --clr-light-500: #e7e7e7;
+      --clr-light-600: #cacaca;
+      --clr-light-700: #989898;
+      --clr-dark-300: #858585;
+      --clr-dark-400: #5c5c5c;
+      --clr-dark-500: #333333;
+      --clr-dark-600: #292929;
+      --clr-dark-700: #1f1f1f;
+      --clr-dark-800: #141414;
+      --clr-dark-900: #0a0a0a;
+      --clr-primary-100: #d4e8f1;
+      --clr-primary-200: #aad1e3;
+      --clr-primary-300: #7fb9d4;
+      --clr-primary-400: #53a1c6;
+      --clr-primary-500: #2c94c3;
+      --clr-primary-600: #226e91;
+      --clr-primary-700: #19526c;
+      --clr-primary-800: #12384a;
+      --clr-primary-800-2: #12384a80;
+      --clr-primary-900: #081c25;
+      --clr-all-primary-900: #081020;
+      --clr-all-primary-800: #171c27;
+      --clr-all-primary-500: #2d95c5;
+      --clr-all-font-white: #fdfdfd;
+      --clr-all-font-light: #c7c2c2;
+      --clr-all-font-black: #0a0a0a;
+      --clr-header-blue: #0a335c;
+      --clr-title: #a7d0dc;
+      --clr-Pink: #ffc0cb;
+      --clr-Cyan: #009999;
+      --clr-DarkCyan: #006666;
+      --clr-WhoIS_Orange: #f5893a;
+      --clr-Orange_Focus: #ffa500;
+      --clr-Green: #00aa00;
+      --clr-Lightcoral: #f08080;
+      --clr-Green-Alert: 120, 100%, 33%, 0.5;
+      --clr-Brown-Alert: 34, 57%, 70%, 0.5;
+      --clr-Pink-Alert: 350, 95%, 16%, 0.8;
+      --clr-Orange-Alert: 39, 100%, 50%, 0.7;
+      --clr-Skyblue: #87ceeb;
+      --clr-Red: #f51212;
+      --clr-Brown: #fcdaae;
+      --clr-HSLA-Brown: hsla(39, 100%, 70%, 0.7);
+      --clr-HSLA-Brown-Dark: hsla(39, 100%, 50%, 0.7);
+      --clr-HSLA-Red: hsla(350, 95%, 30%, 0.8);
+      --clr-HSLA-Red-Dark: hsla(350, 95%, 16%, 0.8);
+      --clr-HSLA-Gray: hsla(34, 57%, 85%, 0.5);
+      --clr-HSLA-Gray-Dark: hsla(34, 57%, 70%, 0.5);
+      --clr-HSLA-Green: hsla(120, 100%, 50%, 0.5);
+      --clr-HSLA-Green-Dark: hsla(120, 100%, 33%, 0.5);
+      --clr-elementisopenPink: 326, 37%, 55%;
+      --clr-elementisclosedBlue: 191, 39%, 40%;
+      --clr-darkslategray: #2f4f4f;
+    }
+
+    /* Browser preference is dark mode. Change below CSS for dark toggle, too. */
+    @media (prefers-color-scheme: dark) {
+        & {
+          --clr-light-100: #0a0a0a;
+          --clr-light-300: #141414;
+          --clr-light-500: #1f1f1f;
+          --clr-light-600: #292929;
+          --clr-light-700: #333333;
+          --clr-dark-300: #5c5c5c;
+          --clr-dark-400: #858585;
+          --clr-dark-500: #989898;
+          --clr-dark-600: #cacaca;
+          --clr-dark-700: #e7e7e7;
+          --clr-dark-800: #fefefe;
+          --clr-dark-900: #ffffff;
+          --clr-primary-100: #081c25;
+          --clr-primary-200: #11384a;
+          --clr-primary-300: #19536e;
+          --clr-primary-400: #226f93;
+          --clr-primary-500: #2d95c5;
+          --clr-primary-600: #55a2c6;
+          --clr-primary-700: #7fb9d4;
+          --clr-primary-800: #aad1e3;
+          --clr-primary-800-2: #aad1e380;
+          --clr-primary-900: #d4e8f1;
+          --clr-all-primary-900: #0a335c;
+          --clr-all-primary-800: #171c27;
+          --clr-all-primary-500: #2d95c5;
+          --clr-all-font-white: #fdfdfd;
+          --clr-all-font-light: #c7c2c2;
+          --clr-all-font-black: #0a0a0a;
+          --clr-header-blue: #14264a;
+          --clr-title: #a7d0dc;
+          --clr-Pink: #51020f;
+          --clr-Cyan: #009999;
+          --clr-DarkCyan: #006666;
+          --clr-WhoIS_Orange: #f5893a;
+          --clr-Orange_Focus: #ffa500;
+          --clr-Green: #00aa00;
+          --clr-Lightcoral: #f08080;
+          --clr-Green-Alert: 120, 100%, 33%, 0.5;
+          --clr-Brown-Alert: 34, 57%, 70%, 0.5;
+          --clr-Pink-Alert: 350, 95%, 16%, 0.8;
+          --clr-Orange-Alert: 39, 100%, 50%, 0.7;
+          --clr-Skyblue: #87ceeb;
+          --clr-Red: #fb6060;
+          --clr-Brown: #deb887;
+          --clr-HSLA-Brown: hsla(39, 100%, 70%, 0.7);
+          --clr-HSLA-Brown-Dark: hsla(39, 100%, 50%, 0.7);
+          --clr-HSLA-Red: hsla(350, 95%, 30%, 0.8);
+          --clr-HSLA-Red-Dark: hsla(350, 95%, 16%, 0.8);
+          --clr-HSLA-Gray: hsla(34, 57%, 85%, 0.5);
+          --clr-HSLA-Gray-Dark: hsla(34, 57%, 70%, 0.5);
+          --clr-HSLA-Green: hsla(120, 100%, 50%, 0.5);
+          --clr-HSLA-Green-Dark: hsla(120, 100%, 33%, 0.5);
+          --clr-elementisopenPink: 326, 37%, 55%;
+          --clr-elementisclosedBlue: 191, 39%, 40%;
+          --clr-darkslategray: #309c9c;
+        }
+      }
+    /* User preference changes to dark mode */
+    & body.darkMode {
+        --clr-light-100: #0a0a0a;
+        --clr-light-300: #141414;
+        --clr-light-500: #1f1f1f;
+        --clr-light-600: #292929;
+        --clr-light-700: #333333;
+        --clr-dark-300: #5c5c5c;
+        --clr-dark-400: #858585;
+        --clr-dark-500: #989898;
+        --clr-dark-600: #cacaca;
+        --clr-dark-700: #e7e7e7;
+        --clr-dark-800: #fefefe;
+        --clr-dark-900: #ffffff;
+        --clr-primary-100: #081c25;
+        --clr-primary-200: #11384a;
+        --clr-primary-300: #19536e;
+        --clr-primary-400: #226f93;
+        --clr-primary-500: #2d95c5;
+        --clr-primary-600: #55a2c6;
+        --clr-primary-700: #7fb9d4;
+        --clr-primary-800: #aad1e3;
+        --clr-primary-800-2: #aad1e380;
+        --clr-primary-900: #d4e8f1;
+        --clr-all-primary-900: #0a335c;
+        --clr-all-primary-800: #171c27;
+        --clr-all-primary-500: #2d95c5;
+        --clr-all-font-white: #fdfdfd;
+        --clr-all-font-light: #c7c2c2;
+        --clr-all-font-black: #0a0a0a;
+        --clr-header-blue: #111f3b;
+        --clr-title: #a7d0dc;
+        --clr-Pink: #51020f;
+        --clr-Cyan: #009999;
+        --clr-DarkCyan: #006666;
+        --clr-WhoIS_Orange: #f5893a;
+        --clr-Orange_Focus: #ffa500;
+        --clr-Green: #00aa00;
+        --clr-Lightcoral: #f08080;
+        --clr-Green-Alert: 120, 100%, 33%, 0.5;
+        --clr-Brown-Alert: 34, 57%, 70%, 0.5;
+        --clr-Pink-Alert: 350, 95%, 16%, 0.8;
+        --clr-Orange-Alert: 39, 100%, 50%, 0.7;
+        --clr-Skyblue: #87ceeb;
+        --clr-Red: #fb6060;
+        --clr-Brown: #deb887;
+        --clr-HSLA-Brown: hsla(39, 100%, 70%, 0.7);
+        --clr-HSLA-Brown-Dark: hsla(39, 100%, 50%, 0.7);
+        --clr-HSLA-Red: hsla(350, 95%, 30%, 0.8);
+        --clr-HSLA-Red-Dark: hsla(350, 95%, 16%, 0.8);
+        --clr-HSLA-Gray: hsla(34, 57%, 85%, 0.5);
+        --clr-HSLA-Gray-Dark: hsla(34, 57%, 70%, 0.5);
+        --clr-HSLA-Green: hsla(120, 100%, 50%, 0.5);
+        --clr-HSLA-Green-Dark: hsla(120, 100%, 33%, 0.5);
+        --clr-elementisopenPink: 326, 37%, 55%;
+        --clr-elementisclosedBlue: 191, 39%, 40%;
+        --clr-darkslategray: #309c9c;
+    }
+}
+
+#themeToggle {
+  &.enabled .toggle.Dark {
+    background-color: var(--clr-all-primary-800);
+  }
+
+  &.enabled .Dark .switch {
+    transform: translateX(18px);
+    background-color: var(--clr-all-font-light);
+  }
+
+  &.enabled .Light .switch {
+    transform: translateX(36px);
+    background-color: var(--clr-all-primary-800);
+  }
+
+  & .toggle {
+    background-color: var(--clr-all-font-light);
+  }
+
+  & .toggle.Dark {
+    background-color: var(--clr-all-primary-800);
+  }
+
+  & .switch {
+    transform: translateX(0px);
+    background-color: var(--clr-all-primary-800);
+  }
+  
+  & .Dark .switch {
+    background-color: var(--clr-all-font-light);
+  }
+}
+
+body.darkMode {
+  & a {
+    color: var(--clr-Skyblue);
+  }
+
+  & dt {
+    color: var(--clr-primary-600);
+  }
+
+  & dd {
+    color: var(--clr-primary-800);
+  }
+
+  & footer {
+    background-color: hsl(210, 80%, 5%);
+  }
+
+  &#webIDE-B {
+    background-color: var(--clr-all-primary-900);
+
+    & #webIDECards li {
+      background-color: var(--clr-dark-600) !important;
+      color: var(--clr-all-primary-900) !important;
+
+      &:hover {
+        background-color: var(--clr-dark-700) !important;
+      }
+
+      &:active {
+        background-color: var(--clr-dark-700) !important;
+      }
+
+      & h3 {
+        color: var(--clr-all-primary-900) !important;
+      }
+
+      & a {
+        color: var(--clr-primary-200);
+      }
+
+      & a:hover {
+        color: var(--clr-primary-500);
+      }
+    }
+  }
+
+  & .spanAlertFeatures {
+    color: var(--clr-all-font-light) !important;
+  }
+
+  & section#ToDO,
+  & section#dictionary {
+    padding: 0 3em;
+    background-color: var(--clr-light-100);
+    border-radius: 2em;
+    margin: 2em;
+    padding-block: 2em;
+    width: fit-content;
+  }
+
+  & Google #google tr,
+  & Google #google td {
+    background-color: var(--clr-light-600);
+  }
+
+  & .WebBits {
+    & a:link:not(> .examplePink) {
+      color: var(--clr-Skyblue);
+    }
+  }
+
+  .examplePink a:hover {
+    color: var(--clr-dark-600);
+  }
+
+  #PropagationLatency{
+    box-shadow: 6.7px 10.1px 22.2px -9px rgba(255, 255, 255, 0.031),
+        8px 12px 16.8px -9px rgba(255, 255, 255, 0.045),
+        8.5px 12.8px 11.9px -9px rgba(255, 255, 255, 0.056),
+        8.7px 13.1px 10.3px -9px rgba(255, 255, 255, 0.065),
+        8.9px 13.4px 13.4px -9px rgba(255, 255, 255, 0.074),
+        9.3px 14px 22.7px -9px rgba(255, 255, 255, 0.085),
+        10.3px 15.4px 39.3px -9px rgba(255, 255, 255, 0.099),
+        14px 21px 65px -9px rgba(255, 255, 255, 0.13);
+  }
+
+  #screensize {
+    @media only screen and (max-width: 500px) {
+     &::before {
+      color: var(--clr-Brown);
+     }
+    }
+  }
+
+  & #chatGPT p img,
+  & #openWith,
+  & #Ingrid-figure,
+  & .imgShadow {
+    box-shadow: -10px 10px 15px 0px var(--clr-primary-400);
+  }
+}

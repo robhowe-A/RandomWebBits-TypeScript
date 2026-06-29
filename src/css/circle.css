@@ -1,0 +1,290 @@
+/*--Copyright (c) 2023-2026 Robert A. Howell*/
+
+.pieContainer {
+  --PieChartHeight: 550px;
+  --slice1Weight: 0.0206;
+  width: var(--PieChartHeight);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  position: relative;
+
+  --halfofwidth: calc(var(--PieChartHeight) / 2);
+  --fiftypercent: calc(var(--halfofwidth) / var(--PieChartHeight) * 100%);
+  /* (((tan(360*.0206)*275)/550)*100)
+  formula does not work in CSS?
+  Slice1 height: manual, from calculator = (((tan(360*.0206)*275)/550)*100) = 6.50806%
+  Slice2 height: manual, from calculator = (((tan(360*.0188)*275)/550)*100) = 5.93382%
+  Slice3 height: manual, from calculator = (((tan(360*.0051)*275)/550)*100) = 1.60276%
+  Slice4 height: manual, from calculator = (((tan(360*.0016)*275)/550)*100) = 0.50267%
+  Slice5 height: manual, from calculator = (((tan(360*.0006)*275)/550)*100) = 0.18850%
+
+   NOTES --tangent: calc(tan(7.416));
+     --firsttangentpercent: calc(calc(calc(tan(calc(360*.0206))*275)/550)*100%);
+  */
+
+  --slice1Height: calc(var(--fiftypercent) + 6.50806%);
+  --slice2Height: calc(var(--slice1Height) + 5.93382%);
+  --slice3Height: calc(var(--slice2Height) + 1.60276%);
+  --slice4Height: calc(var(--slice3Height) + 0.50267%);
+  --slice5Height: calc(var(--slice4Height) + 0.1885%);
+  box-shadow: 0px 5px 15px -10px black;
+  border-radius: 100%;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: var(--clr-light-500);
+  border-radius: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 50%;
+  z-index: 11;
+  box-shadow: inset 0px 5px 15px -10px black;
+}
+
+#pieRemainder .pieProportion {
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+#pieRemainder {
+  transition: all 1s;
+  background-color: #c8a98a;
+  clip-path: polygon(0% 0%,
+      100% 0%,
+      100% 50%,
+      50% 50%,
+      100% var(--slice5Height),
+      100% 100%,
+      0% 100%);
+  z-index: 10;
+}
+
+#pieRemainder:hover {
+  background-color: teal;
+}
+
+#slice1 .pieProportion {
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip-path: polygon(50% 50%, 100% 50%, 100% var(--slice1Height));
+  /* 2.06% || 71.588px height*/
+  /*calc(275px + 35.794px) */
+  /*calc(50% + 6.508%)*/
+  background-color: #0360ad;
+  z-index: 5;
+}
+
+#slice1 .pieProportion:hover {
+  background-color: teal;
+}
+
+#slice2 .pieProportion {
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip-path: polygon(50% 50%,
+      100% var(--slice1Height),
+      100% var(--slice2Height));
+  /* 1.88% || 65.272 */
+  background-color: #16a0a0;
+  z-index: 4;
+}
+
+#slice2 .pieProportion:hover {
+  background-color: teal;
+}
+
+#slice3 .pieProportion {
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip-path: polygon(50% 50%,
+      100% var(--slice2Height),
+      100% var(--slice3Height));
+  /* 0.51% || 17.63 */
+  background-color: #fc9f52;
+  z-index: 3;
+}
+
+#slice3 .pieProportion:hover {
+  background-color: teal;
+}
+
+#slice4 .pieProportion {
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip-path: polygon(50% 50%,
+      100% var(--slice3Height),
+      100% var(--slice4Height));
+  /* 0.16% || 5.529 */
+  background-color: #c23b23;
+  z-index: 2;
+}
+
+#slice4 .pieProportion:hover {
+  background-color: teal;
+}
+
+#slice5 .pieProportion {
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip-path: polygon(50% 50%,
+      100% var(--slice4Height),
+      100% var(--slice5Height));
+  /* 0.06% || 2.073 */
+  background-color: #34a853;
+}
+
+#slice5 .pieProportion:hover {
+  background-color: teal;
+}
+
+.slice {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.directDot::after {
+  position: absolute;
+  content: "";
+  background-color: #c8a98a;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  left: calc(1.25em - 7.5px);
+  top: calc(50% - 7.5px);
+}
+
+.referralsDot::after {
+  position: absolute;
+  content: "";
+  background-color: #0360ad;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  left: calc(1.25em - 7.5px);
+  top: calc(50% - 7.5px);
+}
+
+.socialDot {
+  position: absolute;
+  content: "";
+  background-color: #16a0a0;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  left: calc(1.25em - 7.5px);
+  top: calc(50% - 7.5px);
+}
+
+.searchDot {
+  position: absolute;
+  content: "";
+  background-color: #fc9f52;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  left: calc(1.25em - 7.5px);
+  top: calc(50% - 7.5px);
+}
+
+.emailDot {
+  position: absolute;
+  content: "";
+  background-color: #c23b23;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  left: calc(1.25em - 7.5px);
+  top: calc(50% - 7.5px);
+}
+
+.displayadsDot {
+  position: absolute;
+  content: "";
+  background-color: #34a853;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  left: calc(1.25em - 7.5px);
+  top: calc(50% - 7.5px);
+}
+
+#Google figure .google {
+  margin: 0 auto;
+}
+
+#Google figure:first-of-type {
+  margin-top: 3em;
+  opacity: 1 !important;
+}
+
+#Google table {
+  margin: 2em auto 0 auto;
+  border-collapse: collapse;
+}
+
+#googlefig {
+  background-color: var(--clr-light-300);
+  border-radius: 0.3em;
+  box-shadow: 0 0 2 1 solid var(--color-light-500);
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+  padding-inline: 2em;
+}
+
+#google table,
+#google th,
+#google tr,
+#google td {
+  margin: 0 auto;
+  padding: 0.5em 1.8em;
+}
+
+#google th {
+  color: var(--clr-light-400);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 350px) {
+  #googlefig {
+    background: none;
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  .pieContainer {
+    --PieChartHeight: 450px;
+    width: var(--PieChartHeight);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .pieContainer {
+    --PieChartHeight: 550;
+    width: var(--PieChartHeight);
+  }
+}

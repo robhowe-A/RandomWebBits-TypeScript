@@ -1,0 +1,124 @@
+/*--Copyright (c) 2023-2026 Robert A. Howell*/
+
+#mainFlashCardGame {
+  width: 90%;
+  margin-inline: auto;
+
+  & h2 {
+    text-align: center;
+    width: 100%;
+
+    &:first-child {
+      font-size: 3em;
+    }
+  }
+
+  & ul[is="expanding-list"] li span:hover {
+    color: initial;
+  }
+
+  & ul[is="expanding-list"] li span {
+    background-color: initial;
+  }
+
+  & #mainFlashCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    background-color: initial !important;
+  }
+
+  & .gameCard {
+    height: 80px;
+    background-color: var(--clr-primary-400);
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 5px 0px var(--clr-DarkCyan);
+    color: var(--clr-dark-600);
+
+    & .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 700ms ease 0s;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 350px;
+      height: 350px;
+      perspective: 500px;
+    }
+
+    &:hover .inner.vertical {
+      transform: rotateX(180deg);
+    }
+
+    & .inner .cardFront,
+    & .inner .cardBack {
+      display: grid;
+      align-items: center;
+    }
+
+    & .cardFront,
+    & .cardBack {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
+    }
+
+    & .cardBack {
+      background-color: transparent;
+      transform: rotateY(180deg);
+
+      & h3::after {
+        content: "(attribution)";
+        display: block;
+        font-size: 0.7em;
+        text-decoration: none;
+        padding: 0.3em;
+      }
+    }
+
+    & .cardBack.vertical {
+      transform: rotateX(180deg);
+    }
+
+    @media only screen and (max-width: 400px) {
+      & {
+        width: 90%;
+        scale: 0.85;
+      }
+    }
+
+    @media only screen and (min-width: 401px) {
+      & {
+        width: 45%;
+        scale: 0.9;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      & {
+        width: 30%;
+        scale: 1;
+        padding: 1em;
+        margin-right: 5%;
+        margin-bottom: 0.5em;
+      }
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+}

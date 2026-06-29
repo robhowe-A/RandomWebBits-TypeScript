@@ -1,0 +1,91 @@
+/*--Copyright (c) 2023-2026 Robert A. Howell*/
+
+:root {
+  --app-width: 90%;
+}
+
+#color-picker {
+  width: 100%;
+  height: max(210px, 54vh);
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+
+#color-picker p {
+  text-align: center;
+  margin: 0;
+}
+
+#color-picker div div {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+#HSLColorONE {
+  max-width: var(--app-width);
+  height: max(70px, 18vh);
+  width: 100%;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  margin: auto;
+}
+
+#HSLColorTWO {
+  max-width: var(--app-width);
+  height: max(70px, 18vh);
+  width: 100%;
+  margin: auto;
+}
+
+#HSLColorTHREE {
+  max-width: var(--app-width);
+  height: max(70px, 18vh);
+  width: 100%;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  margin: auto;
+}
+
+input#Hue {
+  width: 50px;
+  margin: 1em;
+}
+
+input#Saturation {
+  width: 50px;
+  margin: 1em;
+}
+
+input#Lightness {
+  width: 50px;
+  margin: 1em;
+}
+
+#color-labels {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+label {
+  text-align: center;
+}
+
+@media only screen and (min-width: 580px) {
+  input#Hue {
+    width: 100px;
+    margin: 1em;
+  }
+
+  input#Saturation {
+    width: 100px;
+    margin: 1em;
+  }
+
+  input#Lightness {
+    width: 100px;
+    margin: 1em;
+  }
+}
